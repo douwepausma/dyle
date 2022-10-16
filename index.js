@@ -137,16 +137,6 @@ module.exports = ({ addComponents, theme, e }) => {
 
     addComponents(badges);
 
-    /* Card styles */
-    addComponents({
-        '.card': {
-            borderWidth: '1px',
-            borderColor: colors.gray[300],
-            borderRadius: theme('borderRadius.xl'),
-            padding: theme('spacing.4'),
-        }
-    })
-
     /* Input styles */
     addComponents({
         '.input-field': {
