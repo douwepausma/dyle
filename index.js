@@ -14,7 +14,7 @@ module.exports = ({ addComponents, addBase, theme, e }) => {
             textAlign: 'center',
             borderRadius: borderRadiusBase,
             fontWeight: '600',
-            textDecorationLine: 'none',
+            textDecoration: 'none',
             transitionProperty: 'color, background-color, border-color',
             transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
             transitionDuration: '150ms',
@@ -26,7 +26,7 @@ module.exports = ({ addComponents, addBase, theme, e }) => {
             border: '1px solid',
             borderColor: 'transparent',
             cursor: 'pointer',
-        }
+        },
     })
 
     /* Button colors styles */
