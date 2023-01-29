@@ -181,7 +181,7 @@ module.exports = ({ addComponents, addBase, theme, e }) => {
         '.input-field[type="file"]': {
             padding: '16px',
             borderWidth: '1px',
-            borderColor: theme('colors.slate.400'),
+            borderColor: colors.slate[300],
             borderRadius: '18px',
             borderStyle: 'dashed',
             marginTop: '2px',
@@ -189,7 +189,7 @@ module.exports = ({ addComponents, addBase, theme, e }) => {
         '.input-field[type="text"], .input-field[type="email"], .input-field[type="number"], select.input-field, textarea.input-field': {
             width: '100%',
             borderWidth: '1px',
-            borderColor: colors.slate[400],
+            borderColor: colors.slate[300],
             borderRadius: borderRadiusBase,
             backgroundColor: 'transparent',
             paddingTop: '6px',
@@ -264,8 +264,8 @@ module.exports = ({ addComponents, addBase, theme, e }) => {
             paddingLeft: theme('spacing.6'),
         },
         'code': {
-            backgroundColor: theme('colors.primary.100'),
-            color: theme('colors.primary.900'),
+            backgroundColor: colors.primary[100],
+            color: colors.primary[900],
             paddingRight: theme('spacing.1'),
             paddingLeft: theme('spacing.1'),
             borderRadius: '4px'
