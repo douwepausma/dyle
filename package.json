@@ -1,8 +1,22 @@
 {
-  "name": "dyle",
+  "name": "@douwepausma/dyle",
   "version": "2.0.0",
   "description": "Component library for Tailwindcss.",
   "main": "index.js",
   "author": "Douwe Pausma",
-  "license": "ISC"
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/douwepausma/dyle.git"
+  },
+  "keywords": [
+    "tailwindcss"
+  ],
+  "bugs": {
+    "url": "https://github.com/douwepausma/dyle/issues"
+  },
+  "homepage": "https://github.com/douwepausma/dyle#readme"
 }
