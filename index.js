@@ -14,7 +14,6 @@ module.exports = ({ addComponents, addBase, theme, e }) => {
             textAlign: 'center',
             borderRadius: borderRadiusBase,
             fontWeight: '600',
-            textDecoration: 'none',
             transitionProperty: 'color, background-color, border-color',
             transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
             transitionDuration: '150ms',
@@ -26,6 +25,9 @@ module.exports = ({ addComponents, addBase, theme, e }) => {
             border: '1px solid',
             borderColor: 'transparent',
             cursor: 'pointer',
+            '&:hover': {
+                textDecoration: 'none',
+            }
         },
     })
 
@@ -82,13 +84,15 @@ module.exports = ({ addComponents, addBase, theme, e }) => {
             textAlign: 'center',
             borderRadius: theme('borderRadius.full'),
             fontWeight: '600',
-            textDecorationLine: 'none',
             transitionProperty: 'color, background-color, border-color',
             transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
             transitionDuration: '150ms',
             paddingRight: theme('spacing.2'),
             paddingLeft: theme('spacing.2'),
             border: '1px solid transparent',
+            '&:hover': {
+                textDecoration: 'none',
+            }
         }
     })
 
@@ -186,7 +190,7 @@ module.exports = ({ addComponents, addBase, theme, e }) => {
             borderStyle: 'dashed',
             marginTop: '2px',
         },
-        '.input-field[type="text"], .input-field[type="email"], .input-field[type="number"], select.input-field, textarea.input-field': {
+        '.input-field[type="text"], .input-field[type="password"], .input-field[type="email"], .input-field[type="tel"], .input-field[type="number"], select.input-field, textarea.input-field': {
             width: '100%',
             borderWidth: '1px',
             borderColor: colors.slate[300],
