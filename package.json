@@ -1,7 +1,7 @@
 {
-  "name": "dstyles",
-  "version": "1.0.0",
-  "description": "Style Library for Tailwind.",
+  "name": "dyle",
+  "version": "2.0.0",
+  "description": "Component library for Tailwindcss.",
   "main": "index.js",
   "author": "Douwe Pausma",
   "license": "ISC"
