@@ -36,11 +36,9 @@ module.exports = ({ addComponents, addBase, theme, e }) => {
         return {
             [`.btn-${key}`]: {
                 color: value[900],
-                backgroundColor: value[200],
-                borderColor: value[300],
+                backgroundColor: value[300],
 
                 '&:hover': {
-                    backgroundColor: value[300],
                     borderColor: value[400],
                 },
             },
@@ -57,6 +55,7 @@ module.exports = ({ addComponents, addBase, theme, e }) => {
 
                 '&:hover': {
                     backgroundColor: value[100],
+                    borderColor: value[300],
                 },
                 'path': {
                     fill: value[900],
@@ -100,13 +99,11 @@ module.exports = ({ addComponents, addBase, theme, e }) => {
         return {
             [`.badge-${key}`]: {
                 color: value[900],
-                backgroundColor: value[200],
-                borderColor: value[300],
+                backgroundColor: value[300],
             },
             /* Add hover styles when badge is <a> */
             [`a.badge-${key}`]: {
                 '&:hover': {
-                    backgroundColor: value[300],
                     borderColor: value[400],
                     cursor: 'pointer',
                 },
@@ -125,6 +122,7 @@ module.exports = ({ addComponents, addBase, theme, e }) => {
             [`a.badge-outline-${key}`]: {
                 '&:hover': {
                     backgroundColor: value[100],
+                    borderColor: value[300],
                     cursor: 'pointer',
                 },
             },
