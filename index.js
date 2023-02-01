@@ -36,12 +36,12 @@ module.exports = ({ addComponents, addBase, theme, e }) => {
         return {
             [`.btn-${key}`]: {
                 color: value[900],
-                backgroundColor: value[300],
+                backgroundColor: value[200],
                 borderColor: value[300],
 
                 '&:hover': {
-                    backgroundColor: value[400],
-                    borderColor: value[500],
+                    backgroundColor: value[300],
+                    borderColor: value[400],
                 },
             },
         }
@@ -52,12 +52,11 @@ module.exports = ({ addComponents, addBase, theme, e }) => {
         return {
             [`.btn-outline-${key}`]: {
                 backgroundColor: 'transparent',
-                borderColor: value[300],
+                borderColor: value[200],
                 color: value[900],
 
                 '&:hover': {
-                    backgroundColor: value[400],
-                    borderColor: value[500],
+                    backgroundColor: value[100],
                 },
                 'path': {
                     fill: value[900],
@@ -101,13 +100,14 @@ module.exports = ({ addComponents, addBase, theme, e }) => {
         return {
             [`.badge-${key}`]: {
                 color: value[900],
-                backgroundColor: value[300],
+                backgroundColor: value[200],
+                borderColor: value[300],
             },
             /* Add hover styles when badge is <a> */
             [`a.badge-${key}`]: {
                 '&:hover': {
-                    backgroundColor: value[400],
-                    borderColor: value[500],
+                    backgroundColor: value[300],
+                    borderColor: value[400],
                     cursor: 'pointer',
                 },
             },
@@ -118,14 +118,13 @@ module.exports = ({ addComponents, addBase, theme, e }) => {
     badges.push(Object.entries(colors).map(([key, value]) => {
         return {
             [`.badge-outline-${key}`]: {
+                borderColor: value[200],
                 color: value[900],
-                borderColor: value[300],
             },
             /* Add hover styles when badge is <a> */
             [`a.badge-outline-${key}`]: {
                 '&:hover': {
-                    backgroundColor: value[400],
-                    borderColor: value[500],
+                    backgroundColor: value[100],
                     cursor: 'pointer',
                 },
             },
@@ -246,7 +245,7 @@ module.exports = ({ addComponents, addBase, theme, e }) => {
         return {
             [`.alert-${key}`]: {
                 color: value[900],
-                backgroundColor: value[300],
+                backgroundColor: value[200],
             },
         }
     }))
