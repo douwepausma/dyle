@@ -1,10 +1,13 @@
-module.exports = ({ addComponents, addBase, theme, e }) => {
+const plugin = require('tailwindcss/plugin');
+
+module.exports = plugin(
+  function ({ addComponents, addBase, addUtilities, theme, variants }) {
     const colors = theme('colors');
     let buttons = [];
     let badges = [];
     let alerts = [];
 
-    let borderRadiusBase = '14px';
+    const borderRadiusBase = '14px';
 
     /* Button base styles */
     buttons.push({
@@ -80,13 +83,13 @@ module.exports = ({ addComponents, addBase, theme, e }) => {
             lineHeight: '1.4',
             alignItems: 'center',
             textAlign: 'center',
-            borderRadius: theme('borderRadius.full'),
+            // borderRadius: theme('borderRadius.full'),
             fontWeight: '600',
             transitionProperty: 'color, background-color, border-color',
             transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
             transitionDuration: '150ms',
-            paddingRight: theme('spacing.2'),
-            paddingLeft: theme('spacing.2'),
+            // paddingRight: theme('spacing.2'),
+            // paddingLeft: theme('spacing.2'),
             border: '1px solid transparent',
             '&:hover': {
                 textDecoration: 'none',
@@ -272,4 +275,5 @@ module.exports = ({ addComponents, addBase, theme, e }) => {
             borderRadius: '4px'
         }
     })
-}
+  },
+);
