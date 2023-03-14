@@ -1,7 +1,7 @@
 const plugin = require('tailwindcss/plugin');
 
 module.exports = plugin(
-  function ({ addComponents, addBase, addUtilities, theme, variants }) {
+  function ({ addComponents, addBase, theme, variants }) {
     const colors = theme('colors');
     let buttons = [];
     let badges = [];
@@ -32,7 +32,7 @@ module.exports = plugin(
                 textDecoration: 'none',
             }
         },
-    })
+    });
 
     /* Button colors styles */
     buttons.push(Object.entries(colors).map(([key, value]) => {
@@ -46,7 +46,7 @@ module.exports = plugin(
                 },
             },
         }
-    }))
+    }));
 
     /* Button outline styles */
     buttons.push(Object.entries(colors).map(([key, value]) => {
@@ -65,14 +65,14 @@ module.exports = plugin(
                 }
             }
         }
-    }))
+    }));
 
     /* Button icon styles */
     buttons.push({
         ['.btn-icon']: {
             padding: '8px',
         }
-    })
+    });
 
     addComponents(buttons);
 
@@ -95,7 +95,7 @@ module.exports = plugin(
                 textDecoration: 'none',
             }
         }
-    })
+    });
 
     /* Badge colors styles */
     badges.push(Object.entries(colors).map(([key, value]) => {
@@ -112,7 +112,7 @@ module.exports = plugin(
                 },
             },
         }
-    }))
+    }));
 
     /* Badge outline colors styles */
     badges.push(Object.entries(colors).map(([key, value]) => {
@@ -130,7 +130,7 @@ module.exports = plugin(
                 },
             },
         }
-    }))
+    }));
 
     addComponents(badges);
 
@@ -152,7 +152,7 @@ module.exports = plugin(
             paddingLeft: theme('spacing.4'),
             border: '1px solid transparent',
         }
-    })
+    });
 
     /* Badge colors styles */
     alerts.push(Object.entries(colors).map(([key, value]) => {
@@ -162,7 +162,7 @@ module.exports = plugin(
                 backgroundColor: value[300],
             },
         }
-    }))
+    }));
 
     addComponents(alerts);
 
@@ -220,7 +220,7 @@ module.exports = plugin(
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'calc(100% - 0.75rem) center',
         }
-    })
+    });
 
     /* Alert base styles */
     alerts.push({
@@ -239,7 +239,7 @@ module.exports = plugin(
             paddingLeft: theme('spacing.3'),
             border: '1px solid transparent',
         }
-    })
+    });
 
     /* Alert colors styles */
     alerts.push(Object.entries(colors).map(([key, value]) => {
@@ -249,7 +249,7 @@ module.exports = plugin(
                 backgroundColor: value[200],
             },
         }
-    }))
+    }));
 
     addComponents(alerts);
 
@@ -274,6 +274,24 @@ module.exports = plugin(
             paddingLeft: theme('spacing.1'),
             borderRadius: '4px'
         }
-    })
+    });
   },
+  {
+    theme: {
+        extend: {
+            colors: {
+                'primary': {
+                    200: '#BCE0E2',
+                    300: '#BCE0E2',
+                    400: '#94C4C8',
+                    800: '#155357',
+                    900: '#155357',
+                },
+            },
+        },
+    },
+    variants: {
+        dyle: ['responsive'],
+    },
+  }
 );
