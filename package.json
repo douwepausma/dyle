@@ -15,6 +15,9 @@
   "keywords": [
     "tailwindcss"
   ],
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  },
   "bugs": {
     "url": "https://github.com/douwepausma/dyle/issues"
   },
